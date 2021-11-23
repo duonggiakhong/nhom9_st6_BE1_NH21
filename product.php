@@ -265,7 +265,7 @@ require "header.php"?>
 									</div>
 									<div class="product-body">
 										<p class="product-category">Category</p>
-										<h3 class="product-name"><a href="#"><?php echo $value['name']?></a></h3>
+										<h3 class="product-name"><a href="details.php?id=<?php echo $value["id"]?>"><?php echo $value['name']?></a></h3>
 										<h4 class="product-price"><?php echo number_format($value['price'])?>VND</h4>
 										<div class="product-rating">
 											<i class="fa fa-star"></i>
@@ -275,7 +275,7 @@ require "header.php"?>
 											<i class="fa fa-star"></i>
 										</div>
 										<div class="product-btns">
-											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp">add to wishlist</span></button>
+											<button class="add-to-wishlist"><i class="fa fa-heart-o"></i><span class="tooltipp"><a href="Wishlist.php?id=<?php echo $value['id']?>">add to wishlist</a></span></button>
 											<button class="add-to-compare"><i class="fa fa-exchange"></i><span class="tooltipp">add to compare</span></button>
 											<button class="quick-view"><i class="fa fa-eye"></i><span class="tooltipp">quick view</span></button>
 										</div>

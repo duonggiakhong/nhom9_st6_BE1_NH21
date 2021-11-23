@@ -51,9 +51,9 @@ $getAllProducts = $product->getAllProducts();
 			<div id="top-header">
 				<div class="container">
 					<ul class="header-links pull-left">
-						<li><a href="#"><i class="fa fa-phone"></i> +021-95-51-84</a></li>
-						<li><a href="#"><i class="fa fa-envelope-o"></i> email@email.com</a></li>
-						<li><a href="#"><i class="fa fa-map-marker"></i> 1734 Stonecoal Road</a></li>
+						<li><a href="#"><i class="fa fa-phone"></i> +0352757742</a></li>
+						<li><a href="#"><i class="fa fa-envelope-o"></i> nhom9@tdc.edu.vn</a></li>
+						<li><a href="#"><i class="fa fa-map-marker"></i> thu duc</a></li>
 					</ul>
 					<ul class="header-links pull-right">
 						<li><a href="#"><i class="fa fa-dollar"></i> USD</a></li>
@@ -72,7 +72,7 @@ $getAllProducts = $product->getAllProducts();
 						<!-- LOGO -->
 						<div class="col-md-3">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="index.php" class="logo">
 									<img src="./img/logo.png" alt="">
 								</a>
 							</div>
@@ -94,20 +94,20 @@ $getAllProducts = $product->getAllProducts();
 							</div>
 						</div>
 						<!-- /SEARCH BAR -->
-
+						
 						<!-- ACCOUNT -->
 						<div class="col-md-3 clearfix">
 							<div class="header-ctn">
 								<!-- Wishlist -->
 								<div>
-									<a href="#">
+									
+									<a href="Wishlist.php">
 										<i class="fa fa-heart-o"></i>
 										<span>Your Wishlist</span>
-										<div class="qty">2</div>
+										<!--<div class="qty"></div> -->
 									</a>
 								</div>
-								<!-- /Wishlist -->
-
+								<!-- /Wishlist -->															
 								<!-- Cart -->
 								<div class="dropdown">
 									<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
