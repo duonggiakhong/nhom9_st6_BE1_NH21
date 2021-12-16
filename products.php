@@ -47,66 +47,66 @@
                       <th style="width: 17%">
                           Name
                       </th>
+                      <th style="width: 13%">
+                          Manufactures
+                      </th>
+                      <th style="width:   10%">
+                          type
+                      </th>
+                      <th>
+                          Price
+                      </th>
                       <th style="width: 10%">
                           Image
                       </th>
                       <th style='ưidth: 20%'>
                           description
                       </th>
-                      <th>
-                          Price
-                      </th>
-                      <th style="width:   10%">
-                          type
-                      </th>
-                      <th >
-                          Manufactures
-                      </th>
+                  
                       <th >
                         Action
                       </th>
                   </tr>
+                 <!-- <form action="upload.php" method="post" enctype="multipart/form-data">
+                  Select image to upload:
+                  <input type="file" name="fileToUpload" id="fileToUpload">
+                  <input type="submit" value="Upload Image" name="submit">
+                </form> -->
               </thead>
               <tbody>
               <?php 
-                if(isset($_GET['id'])):
-                  $id =$_GET['id'];
                 $getAllProducts = $product->getAllProducts();
                 foreach($getAllProducts as $value):
-                if($value['id'] == $_GET['id']):?>
-                
+                ?>
                   <tr>
                     <td><?php echo $value['id']?></td>
                     <td><?php echo $value['name']?></td>
-                    <td><img style="width:80px" src="../img/<?php echo $value['image']?>"></td>
-                    <td><?php echo $value['description']?></td>
-                    <td class='project_progress'><?php echo number_format($value['price'])?>VND</td>
                     <td class='project-state'>
-                      <?php echo $value['type_name'] ?>
-                      </td>
-                      <td class='project-state'>
                       <?php echo $value['manu_name'] ?>
                     </td>
+                    <td class='project-state'>
+                      <?php echo $value['type_name'] ?>
+                    </td>
+                    <td class='project_progress'><?php echo number_format($value['price'])?>VND</td>
+                    <td><img style="width:80px" src="../img/<?php echo $value['image']?>"></td>
+                    <td><?php echo substr($value['description'],0,40)?><a href="details.php?id=<?php echo $value['id']?>"<?php echo $value['description']?>>[...]</a></td>
+
                     <td class="project-actions text-right">
-                      <a class="btn btn-info btn-sm" href="#">
+                      <a class="btn btn-info btn-sm" href="editproduct.php?id=<?php echo $value['id']?>">
                           <i class="fas fa-pencil-alt">
                           </i>
                           Edit
                       </a>
-                      <a class="btn btn-danger btn-sm" href="#">
+                      <a class="btn btn-danger btn-sm" href="delProduct.php?id=<?php echo $value['id']?>">
                           <i class="fas fa-trash">
                           </i>
                           Delete
                       </a>
                   </td>
                   </tr>
-                  <?php 
-                endif;
-              endforeach;
-              endif;
-              ?>
+                  <?php endforeach;?>
               </tbody>
-          </table><button type="submit" name="submit" ><a href="products.php">Quay Lại</a></button>
+          </table>
         </div>
         <!-- /.card-body -->
       </div>
